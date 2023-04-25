@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <script src="./js/scripts.js" defer></script>
+</head>
+
+<body>
+    <div id="div-container">
+        <span id="span-esquerdo">
+            <h1>
+                Faça parte da PC Games e viva uma nova experiência com jogos online
+                para PC!
+            </h1>
+        </span>
+
+        <span id="span-direito">
+            <form>
+                <h2>Cadastre-se</h2>
+                <div class="div-input-unico">
+                    <input type="text" name="Nome" id="input-nome" oninput="validaNome()"/>
+                    <label for="input-nome" id="label-nome" class="labels">Nome Completo</label>
+                    <div class="div-erro-container">
+                        <span class="span-erro-vazio">Este campo não pode estar vazio.</span>
+                        <span class="span-erro-invalido">Por favor, preencha seu nome corretamente.</span>
+                    </div>
+                </div>
+
+                <div class="div-input-unico">
+                    <input type="text" name="apelido" id="input-apelido" oninput="validaApelido()"/>
+                    <label for="input-apelido" id="label-apelido" class="labels">Apelido</label>
+                    <div class="div-erro-container">
+                        <span class="span-erro-vazio">Este campo não pode estar vazio.</span>
+                        <span class="span-erro-invalido">Por favor, preencha seu apelido corretamente.</span>
+                    </div>
+                </div>
+
+                <div class="div-input-unico">
+                    <input type="email" name="email" id="input-email" oninput="validaEmail()"/>
+                    <label for="input-email" id="label-email" class="labels">E-mail</label>
+                    <div class="div-erro-container">
+                        <span class="span-erro-vazio">Este campo não pode estar vazio.</span>
+                        <span class="span-erro-invalido">Por favor, preencha seu e-mail corretamente.</span>
+                    </div>
+                </div>
+
+                <div class="div-input-unico">
+                    <input type="password" name="senha" id="input-senha" oninput="validaSenha()"/>
+                    <label for="input-senha" id="label-senha" class="labels">Senha</label>
+                    <div class="div-erro-container">
+                        <span class="span-erro-vazio">Este campo não pode estar vazio.</span>
+                        <span class="span-erro-invalido">Sua senha deve ter 8 e 20 caracteres.</span>
+                    </div>
+                </div>
+
+                <div class="div-input-unico">
+                    <input type="password" name="confirma-senha" id="input-confirma-senha" oninput="validaConfirmaSenha()"/>
+                    <label for="input-confirma-senha" id="label-confirma-senha" class="labels">Confirmar Senha</label>
+                    <div class="div-erro-container">
+                        <span class="span-erro-vazio">Este campo não pode estar vazio.</span>
+                        <span class="span-erro-invalido">As senhas inseridas devem ser iguais.</span>
+                    </div>
+                </div>
+
+                <label for="select-genero" id="label-genero">Gênero</label>
+                <select id="select-genero">
+                    <option value="genero-vazio"></option>
+                    <option value="genero-masculino">Masculino</option>
+                    <option value="genero-feminino">Feminino</option>
+                    <option value="genero-nao-binario">Não binário</option>
+                    <option value="genero-outro">Outro</option>
+                    <option value="genero-prefiro-nao-responder">Prefiro não responder</option>
+                </select>
+
+                <p>Você tem mais de 18 anos?</p>
+
+                <span id="span-confirma-idade-sim">
+                    <label for="confirma-idade-sim">Sim</label>
+                    <input type="radio" name="confirma-idade" id="confirma-idade-sim" class="input-confirma-idade" />
+                </span>
+
+                <span id="span-confirma-idade-nao">
+                    <label for="confirma-idade-nao">Não</label>
+                    <input type="radio" name="confirma-idade" id="confirma-idade-nao" class="input-confirma-idade" />
+                </span>
+
+                <span id="span-recebe-emails">
+                    <input type="checkbox" name="recebe-emails" id="input-recebe-emails" />
+                    <label for="input-recebe-emails">Quero receber as novidades da PC Games por e-mail.</label>
+                </span>
+
+                <span id="span-aceita-termos">
+                    <input type="checkbox" name="aceita-termos" id="input-aceita-termos" />
+                    <label for="input-aceita-termos">Declaro que li e aceito os <a href="#" class="links">Termos de
+                            Uso</a> e a <a href="#" class="links">Política de Privacidade</a> da PC Games.</label>
+                </span>
+
+                <div id="div-botao-concluir-cadastro">
+                    <button type="submit" id="botao-concluir-cadastro">Concluir Cadastro</button>
+                </div>
+            </form>
+        </span>
+    </div>
+</body>
+
+</html>
