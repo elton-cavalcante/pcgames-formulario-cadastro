@@ -1,191 +1,195 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(120deg, #0200c0 10%, #f90000);
-    background-size: cover;
-    height: 100vh;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #div-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  background-image: linear-gradient(120deg, #0200c0 10%, #f90000);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-#span-esquerdo {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    width: 40%;
+#span-container-esquerdo {
+  width: 55%;
+  display: flex;
+  align-items: center;
 }
 
-#span-direito {
-    width: 32%;
-    background-color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    padding: 1rem;
-    border-radius: 15px;
+#span-container-esquerdo h1 {
+  color: #fff;
+  padding: 0 10vh;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-#span-direito h2 {
-    text-align: center;
-    text-transform: uppercase;
-    color: #090999;
-    margin: 0.5rem 0;
+#span-container-direito {
+  width: 45%;
+  display: flex;
+  align-items: center;
 }
 
-.div-input-unico,
-#label-genero {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
+form {
+  background-color: whitesmoke;
+  width: 70%;
+  height: 96vh;
+  border-radius: 20px;
+  margin: 0 5vh 0 10vh;
+  padding: 0 2vh;
 }
 
-.div-input-unico input {
-    height: 25px;
-    border: none;
-    background-color: whitesmoke;
-    border-bottom: 2px solid #000;
-    outline: 0;
-    transform: translateY(30px);
-    font-size: 16px;
+#div-primeira-etapa-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
 }
 
-.div-input-unico label {
-    margin-top: 15px;
-    font-size: 15px;
-    transform: translateY(-30px);
+#div-primeira-etapa-container h2 {
+  color: #0200c0;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 1vh;
 }
 
-.div-input-unico input:focus {
-    border-bottom: 2px solid #090999;
+.div-input-label-e-erro {
+  display: flex;
+  flex-direction: column;
 }
 
-.div-input-unico input:focus~label {
-    color: #090999;
-    transition: 400ms;
-    transform: translateY(-35px);
+.erro-vazio,
+.erro-invalido {
+  color: #f90000;
+  font-size: 0.7rem;
+  display: flex;
+  position: relative;
+  display: none;
 }
 
-.div-erro-container {
-    position: relative;
-    margin-bottom: 8px;
+.div-input-label-e-erro input {
+  transform: translateY(4vh);
+  height: 4.5vh;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #000;
+  margin-bottom: 1.5vh;
+  outline: none;
 }
 
-.span-erro-vazio, .span-erro-invalido {
-    margin-top: 5px;
-    font-size: 0.8rem;
-    color: #f90000;
-    position: absolute;
-    display: none;
+.div-input-label-e-erro input:focus {
+  border-bottom-color: #0200c0;
 }
 
-#label-genero {
-    margin-top: 15px;
+.div-input-label-e-erro label {
+  transform: translateY(-1.5vh);
+  cursor: text;
+  font-size: 1rem;
 }
 
-form p {
-    margin: 10px 0;
-    text-align: center;
+.div-input-label-e-erro input:focus ~ label {
+  color: #0200c0;
+  transform: translateY(-4.2vh);
+  transition: 0.4s;
 }
 
-#select-genero {
-    border-radius: 9px;
-    margin: 10px 0;
-    outline: 0;
-    width: 100%;
-    height: 22px;
+.div-input-label-e-erro p {
+  position: absolute;
+  transform: translateY(0vh);
 }
 
-#span-confirma-idade-sim,
-#span-confirma-idade-nao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
+#div-segunda-etapa {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1vh 0 2vh 0;
 }
 
-.input-confirma-idade {
-    margin: 0px 0 0px 7px;
+#div-segunda-etapa h3 {
+  font-weight: lighter;
+  color: #000;
+  margin: 1vh 0 2vh 0;
 }
 
-#span-recebe-emails,
-#span-aceita-termos {
-    display: flex;
-    align-items: baseline;
+#div-primeira-etapa strong,
+#div-segunda-etapa strong {
+  color: #f90000;
+  font-size: 1rem;
 }
 
-#input-recebe-emails,
-#input-aceita-termos {
-    height: 15px;
-    margin: 10px 6px 0 0;
+#identidade-de-genero select {
+  width: 100%;
+  border-radius: 10px;
+  height: 3vh;
+  margin-bottom: 2vh;
+  outline: none;
+  padding-left: 1vh;
 }
 
-.links {
-    text-decoration: none;
-    font-weight: bold;
-    color: #f00e52;
+#span-idade-container {
+  display: flex;
+  width: 40%;
+  margin: 0 auto;
+  justify-content: space-around;
 }
 
-#div-botao-concluir-cadastro {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(120deg, #0200c0 10%, #f90000);
-    margin: 0.6rem 0 0 0;
-    border-radius: 10px;
-    position: relative;
+#div-idade {
+  margin: -0.5vh 0 2vh 0;
 }
 
-#div-botao-concluir-cadastro:hover {
-    border: 4px solid transparent;
-    border-radius: 10px;
-    border: 4px double transparent;
-    border-image-slice: 1;
-    background-image: linear-gradient(#fff, #fff),
-        linear-gradient(120deg, #0200c0 10%, #f90000);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+#div-novidades-e-termos-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
 }
 
-#botao-concluir-cadastro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    background: none;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px;
-    padding: 26px 0;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    height: 100%;
-    width: 100%;
-    position: absolute;
+.span-novidades-e-termos {
+  margin-bottom: 1vh;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: baseline;
+  text-align: left;
 }
 
-#botao-concluir-cadastro:hover {
-    background-image: linear-gradient(120deg, #0200c0 10%, #f90000);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.span-novidades-e-termos input {
+  transform: translateY(0.3vh);
+  accent-color: #10b843;
+}
+
+.span-novidades-e-termos input,
+.span-novidades-e-termos label {
+  margin-right: 1.5vh;
+}
+
+.span-novidades-e-termos a {
+  color: #f00e52;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#botao-concluir-cadastro-container button[type="submit"] {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 6.5vh;
+  text-transform: uppercase;
+  margin-top: 1vh;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #fff;
+  background-image: linear-gradient(120deg, #0200c0 10%, #f90000);
+  border: none;
+}
+
+#botao-concluir-cadastro-container button[type="submit"]:hover {
+  background: none;
+  border: 3px solid #0200c0;
+  color: #0200c0;
 }
